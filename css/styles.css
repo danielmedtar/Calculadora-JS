@@ -1,0 +1,108 @@
+html {
+    font-size: 62.5%;
+}
+body {
+    margin: 0;
+    background-color: #ebeeff;
+}
+
+.default {
+    --text-color: #000;
+    --border: solid 2px #000;
+    --background: white;
+    --backgroundBoton: #EFEFEF;
+    --backgroundDisplay: #EFEFEF;   
+}
+
+.dark {
+    --background: #000;
+    --text-color: #fff;
+    --paddingDark: 10px 15px;
+}
+.darkMode {
+    border: none;
+    font-size: 3rem;
+    padding: var(--paddingDark);
+    margin-bottom: 30px;
+    cursor: pointer;
+    color: var(--text-color);
+    background-color: var(--background);
+    border-radius: 30px;
+}
+
+.contenedor {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculadora {
+    display: grid;
+    grid-template-columns: repeat(4, 75px);
+    grid-template-rows: 160px repeat(5, 75px);
+    padding: 15px;
+    border-radius: 30px;
+    background-color: var(--background);
+}
+
+.boton {
+    cursor: pointer;
+    margin: 5px;
+    border: none;
+    border-radius: 30px;
+    font-size: 1.8rem;
+    font-weight: bold;
+    color: var(--text-color);
+    background-color: var(--backgroundBoton);
+}
+
+@media (min-width: 768px) {
+    .boton {
+        font-size: 2.5rem;
+    }
+}
+
+.boton:active {
+    background-color: rgb(97, 97, 97);
+}
+
+.boton:focus {
+    outline: none;
+}
+
+.doble {
+    grid-column: span 2;
+}
+
+#display {
+    grid-column: 1 / -1;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    margin: 10px 10px 20px;
+    text-align: right;
+    word-break: break-all;
+    border-radius: 30px;
+    font-size: 3.5rem;
+    background-color: var(--backgroundDisplay);
+    color: var(--text-color);
+    font-weight: bold;
+}
+
+.clear {
+    color: red;
+}
+
+.operador {
+    color: green;
+}
+
+.flecha {
+    color: green;
+    font-weight: bolder;
+}
+
